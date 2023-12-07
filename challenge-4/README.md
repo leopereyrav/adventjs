@@ -1,12 +1,10 @@
-## 😵‍💫 Dale la vuelta a los paréntesis
+## 😵‍💫 Turn the parentheses around
 
----
+In Santa's workshop 🎅, some Christmas messages have been written in a peculiar way: **the letters inside the parentheses must be read backwards**.
 
-En el taller de Santa 🎅, algunos mensajes navideños han sido escritos de manera peculiar: **las letras dentro de los paréntesis deben ser leídas al revés**.
+**Santa needs these messages to be properly formatted**. Your task is to write a function that takes a text string and reverses the characters inside each pair of parentheses, removing the parentheses in the final message.
 
-**Santa necesita que estos mensajes estén correctamente formateados**. Tu tarea es escribir una función que tome una cadena de texto y revierta los caracteres dentro de cada par de paréntesis, eliminando los paréntesis en el mensaje final.
-
-Eso sí, ten en cuenta que **pueden existir paréntesis anidados**, por lo que debes invertir los caracteres en el orden correcto.
+However, keep in mind that **nested parentheses may exist**, so you must reverse the characters in the correct order.
 
 ```js
 const a = decode("hola (odnum)");
@@ -18,13 +16,13 @@ console.log(b); // hello world!
 const c = decode("sa(u(cla)atn)s");
 console.log(c); // santaclaus
 
-// Paso a paso:
-// 1. Invertimos el anidado -> sa(ualcatn)s
-// 2. Invertimos el que queda -> santaclaus
+// Step by Step:
+// 1. We invert the nested -> sa(ualcatn)s
+// 2. We invest what is left -> santaclaus
 ```
 
-> **Notas:**
->
-> - Las cadenas de entrada siempre estarán bien formadas con paréntesis que coinciden correctamente, no necesitas validarlos.
-> - En el mensaje final no deben quedar paréntesis.
-> - El nivel máximo de anidamiento es 2.
+**Notes:**
+
+- Input strings will always be well-formed with correctly matching parentheses, you don't need to validate them.
+- There should be no parentheses in the final message.
+- The maximum nesting level is 2.

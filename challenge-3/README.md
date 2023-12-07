@@ -1,12 +1,10 @@
-## 😏 El elfo travieso
+## 😏 The naughty elf
 
----
+In Santa's workshop, **a mischievous elf** has been playing around in the gift-making chain, adding or removing an unplanned step.
 
-En el taller de Santa, **un elfo travieso** ha estado jugando en la cadena de fabricación de regalos, añadiendo o eliminando un paso no planificado.
+You have the original sequence of steps in the original manufacturing and the modified modified sequence which may include an extra step or be missing a step.
 
-Tienes la secuencia original de pasos en la fabricación original y la secuencia modificada modified que puede incluir un paso extra o faltar un paso.
-
-Tu tarea es **escribir una función que identifique y devuelva el primer paso extra que se ha añadido o eliminado en la cadena de fabricación**. Si no hay ninguna diferencia entre las secuencias, devuelve una cadena vacía.
+Your task is to **write a function that identifies and returns the first extra step that has been added or removed in the manufacturing chain**. If there is no difference between the sequences, it returns an empty string.
 
 ```js
 const original = "abcd";
@@ -22,8 +20,8 @@ const modified = "abcde";
 findNaughtyStep(original, modified); // ''
 ```
 
-> **A tener en cuenta:**
->
-> - Siempre habrá un paso de diferencia o ninguno.
-> - La modificación puede ocurrir en cualquier lugar de la cadena.
-> - La secuencia original puede estar vacía.
+**To take into account:**
+
+- There will always be one step difference or none at all.
+- The modification can occur anywhere in the chain.
+- The original sequence may be empty.

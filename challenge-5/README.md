@@ -1,44 +1,42 @@
-## 🛷 El Cybertruck de Santa
+## 🛷 Santa's Cybertruck
 
----
+Santa 🎅 is testing his new electric sleigh, the _CyberReindeer_, on a road in the North Pole. The road is represented with a string of characters, where:
 
-Santa 🎅 está probando su nuevo trineo eléctrico, el _CyberReindeer_, en una carretera del Polo Norte. La carretera se representa con una cadena de caracteres, donde:
+- `.` = Road
+- `S` = Santa's Sleigh
+- `*` = Open barrier
+- `|` = Barrier closed
 
-- `.` = Carretera
-- `S` = Trineo de Santa
-- `*` = Barrera abierta
-- `|` = Barrera cerrada
+Road example: `S...|....|.....`
 
-Ejemplo de carretera: `S...|....|.....`
+Each unit of time, **the sled advances one position to the right**. If it encounters a closed barrier, it stops until the barrier opens. If it is open, it goes straight through.
 
-Cada unidad de tiempo, **el trineo avanza una posición a la derecha**. Si encuentra una barrera cerrada, se detiene hasta que la barrera se abra. Si está abierta, la atraviesa directamente.
+**All barriers start closed**, but after 5 time units, they all open **forever**.
 
-**Todas las barreras empiezan cerradas**, pero después de 5 unidades de tiempo, se abren todas **para siempre**.
-
-**Crea una función que simule el movimiento del trineo** durante un tiempo dado y **devuelva un array** de cadenas representando el estado de la carretera en cada unidad de tiempo:
+**Create a function that simulates the movement of the sled** for a given time and **returns an array** of strings representing the state of the road in each unit of time:
 
 ```js
 const road = 'S..|...|..'
-const time = 10 // unidades de tiempo
+const time = 10 // time units
 const result = cyberReindeer(road, time)
 
 -> result:
 [
-'S..|...|..', // estado inicial
-'.S.|...|..', // avanza el trineo la carretera
-'..S|...|..', // avanza el trineo la carretera
-'..S|...|..', // el trineo para en la barrera
-'..S|...|..', // el trineo para en la barrera
-'...S...*..', // se abre la barrera, el trineo avanza
-'...*S..*..', // avanza el trineo la carretera
-'...*.S.*..', // avanza el trineo la carretera
-'...*..S*..', // avanza el trineo la carretera
-'...*...S..', // avanza por la barrera abierta
+'S..|...|..', // initial state
+'.S.|...|..', // the sleigh advances along the road
+'..S|...|..', // the sled moves along the road
+'..S|...|..', // the sled stops at the barrier
+'..S|...|..', // the sled stops at the barrier
+'...S...*..', // the barrier opens, the sled moves forward
+'...*S..*..', // the sled moves along the road
+'...*.S.*..', // the sled moves along the road
+'...*..S*..', // the sled moves along the road
+'...*...S..', // advance through the open barrier
 ]
 ```
 
-El resultado es un **array donde cada elemento muestra la carretera en cada unidad de tiempo**.
+The result is an **array where each element shows the road in each time unit**.
 
-Ten en cuenta que **si el trineo está en la misma posición que una barrera**, entonces toma su lugar en el array.
+Note that **if the sled is in the same position as a barrier**, then it takes its place in the array.
 
-Los elfos se **inspiraron en este reto de Code Wars**.
+The elves were **inspired by this Code Wars challenge**.

@@ -1,12 +1,10 @@
-## 📦 Las cajas en 3D
+## 📦 The 3D boxes
 
----
+Santa is experimenting with new gift designs and **needs your help to visualize them in 3D**.
 
-Santa está experimentando con nuevos diseños de regalos y **necesita tu ayuda para visualizarlos en 3D**.
+Your task is to write a function that, given a size n (integer), **generates a 3D drawing of a gift** using ASCII characters.
 
-Tu tarea es escribir una función que, dado un tamaño n (entero), **genere un dibujo de un regalo en 3D** utilizando caracteres ASCII.
-
-Las líneas de los regalos se dibujan con `#` y las caras con el símbolo que nos pasan como parámetro:
+The lines of the gifts are drawn with `#` and the faces with the symbol that they pass to us as a parameter:
 
 ```js
 drawGift(4, "+");
@@ -40,6 +38,6 @@ drawGift(1, "^");
 */
 ```
 
-**Importante:** Nos han dicho que **siempre hay que dejar un salto de línea al final del dibujo**.
+**Important:** We have been told that **you should always leave a line break at the end of the drawing**.
 
-**Nota:** Ten en cuenta que, en los tests, la primera línea se ve empujada por el caracter ".
+**Note:** Please note that in tests, the first line is pushed by the " character.

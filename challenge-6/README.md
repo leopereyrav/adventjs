@@ -1,22 +1,20 @@
-## 🦌 Los renos a prueba
+## 🦌 The reindeer on trial
 
----
+The elves are cataloging Santa's reindeer 🦌 based on how far they can travel.
 
-Los elfos están catalogando los renos de Santa 🦌 según la distancia que pueden recorrer.
+To do this, they have a movements text string where each character represents the direction of the reindeer's movement:
 
-Para ello tienen una cadena de texto movements donde cada caracter representa la dirección del movimiento del reno:
+- `>` = Move to the right
+- `<` = Go left
+- `*` = Can move forward or backward
 
-- `>` = Avanza a la derecha
-- `<` = Avanza a la izquierda
-- `*` = Puede avanzar o retroceder
+For example, if the movement is `>>*<`, you go right twice, then you can go right or left (whichever maximizes the final distance traveled) and then go left.
 
-Por ejemplo, si el movimiento es `>>*<`, va hacia la derecha dos veces, luego puede ir a derecha o izquierda (lo que maximice la distancia recorrida final) y luego ir a la izquierda.
+The elves want to know what is the maximum distance the reindeer travels when **completing all movements**.
 
-Los elfos quieren saber cuál es la máxima distancia que recorre el reno al **finalizar todos los movimientos**.
+**In the example above, the maximum distance the reindeer travels is 2**. It goes right twice +2, then with the \* you can go right again to maximize the distance +1 and then it goes left -1.
 
-**En el ejemplo anterior, la máxima distancia que recorre el reno es 2**. Va a la derecha dos veces +2, luego con el \* puede ir a la derecha otra vez para maximizar la distancia +1 y luego va a la izquierda -1.
-
-Crea una función maxDistance que reciba la cadena de texto movements y devuelva **la máxima distancia** que puede recorrer el reno **en cualquier dirección**:
+Create a maxDistance function that takes the movements text string and returns **the maximum distance** the reindeer can travel **in any direction**:
 
 ```js
 const movements = ">>*<";
@@ -32,4 +30,4 @@ const result3 = maxDistance(movements3);
 console.log(result3); // -> 5
 ```
 
-Ten en cuenta que no importa si es a la izquierda o la derecha, la distancia es **el valor absoluto de la distancia recorrida máxima al finalizar los movimientos**.
+Keep in mind that it doesn't matter if it is left or right, the distance is **the absolute value of the maximum distance traveled at the end of the movements**.
